@@ -1,0 +1,98 @@
+@import url('style2.css'); 
+
+/* Стили для верхнего меню */
+
+/*
+селектор {
+	css-свойство: значение-свойство;	
+}
+*/
+
+/*селектор тега */
+h3 {
+	color: green;
+	background-color: orange;
+}
+
+h3 {
+	color: orange;
+	background-color: orange;
+}
+
+/* селектор класса */
+.text-align-center {
+	text-align: center;
+}
+
+.bg-lightblue {
+	background-color: lightblue;
+}
+
+/* селектор идентификатора */
+#container {
+	height: 300px;
+	width: 100px;
+	background-color: yellow;
+}
+
+/* дочерний селектор */
+p > em {
+	font-size: 30px;
+}
+
+/* селекторы потомков */
+p em {
+	color: orange;
+}
+
+.red .link.red { /* 0030 */
+	text-decoration: none;
+}
+
+h1, h2 {
+	font-family: verdana;
+}
+
+/* селектор соседа */
+b + i {
+	color: red;
+}
+
+/* родственный селектор */
+b ~ i {
+	color: red;
+}
+
+/* селектор атрибута */
+span[data-id="1"]{
+	color: green;
+}
+
+.orange {
+	background-color: orange;
+}
+
+.red {
+	background-color: red;
+}
+
+/* 0100 */
+/*#elem { 
+	background-color: yellow;
+}*/
+
+h5 { /* 0001 */
+	background-color: blue;
+}
+
+.body .green { /* 0020 */
+	background-color: gray;
+}
+
+body .green { /* 0011 */
+	background-color: gray;
+}
+
+.green { /* 0010 */
+	background-color: green;
+}
