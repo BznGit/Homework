@@ -1,46 +1,159 @@
 .body {
-    background-image: url("../Images/Лого.png") ;
+    background-image: url("../Images/sea.jpg") ;
     background-repeat: no-repeat ;
     background-position: center ;
     background-attachment: fixed ;
-    background-size:800px 800px ;
-	
+    background-size:100% 100% ;
 }
 
 .zagolovok {
+	
 	color: #fcfcfc;
 	font-size: 50px;
 	font-family: Comic Sans MS;
 	text-align: center;
 	vertical-align: middel;
-	
 	border: 2px solid #0988e3;
 	border-radius:45px;
 	background-color: #0988e3;
-	align: center;
+
 	width: 1200px;
 	height: 90px;
-	
-	margin-left: 200px;
-	margin-right:200px;
+	margin-left: auto;
+	margin-right: auto;
 
+}
+.ul-pos {
+	display: flex;
+	width: 1000px;
+	margin-left:auto;
+	margin-right: auto;
 }
 
 .menu {
-	
+  
 	display: inline-block;
-	color: #0988e3;
-	height: 50px;
+	height: 40px;
 	width: 230px;
-	font-size: 30px;
 	text-align: center;
 	font-family: Comic Sans MS;
-	text-decoration: underline;
-	
+    padding-top:10px;
 	border: 2px solid #07eded;
 	border-radius:45px;
 	background-color: #07eded;
+    margin-left:5px;
+    margin-right: 5px;
+    z-index:4;
+	font-size: 20px;
 	
-
+}
+.sub-menu {
+	display: none;
 
 }
+
+.vis:hover {
+	color:red;
+}
+
+li:hover>.sub-menu{
+	display:flex;
+    flex-direction: column;	
+ 	list-style-type:none;
+	margin-top:15px;
+	margin-left:-45px;
+	padding-left: -45px;
+}
+
+
+.a-underline{
+	text-decoration: none;
+	color: blue;
+
+}
+ 
+ button, [type=submit] {
+	font-family: Comic Sans MS;
+	font-size: 25px;
+	color: white;
+	width:  90%;
+	height: 100px;
+	text-align: cetnter;
+	text-color: white;
+	background-color: #0988e3;
+	border-bottom-color: #0988e3;
+	border-radius: 50px;
+	margin-left: 5%;	
+}
+ input {
+	font-family: Comic Sans MS;
+	font-size: 25px;
+	color: red;
+	width:  81%;
+	height: 50px;
+	text-align: cetnter;
+	text
+	text-color: white;
+	background-color: white;
+	border-bottom-color: #0216F9;
+	border-radius: 25px;
+	margin-left: 5%;
+    padding-left: 5%;
+}
+.form {
+    margin-left: 30%;
+	color:  #0216F9;
+	font-family: Comic Sans MS;
+	font-size: 25px;
+    padding-left: 1%;
+	width:  40%;
+	border-bottom-color: #0216F9;
+	border-radius: 25px;
+	background-color: rgba(188, 230, 225, 0.65);
+}
+.continer {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	flex-direction: column;	
+	color: #0A0B74;;
+	font-size: 20px;
+	font-family: Comic Sans MS;
+	width:60%;
+	align-items: center;
+}
+.flex-text {
+   margin: 10px 20px 20px; 
+   padding: 10px 20px 20px;
+   border-radius: 25px;
+   background-color: rgba(188, 230, 225, 0.65);
+   height:20%;
+}
+
+.slider {
+
+	list-style-type: none;
+	width: 900px;	
+    margin-left:auto;	
+    margin-right: auto;
+	
+}
+.slider-item:target{
+display: block;	
+}
+.slider-item {
+	display: none;	
+}
+
+
+
+.imgslider {
+	width: 100px;	
+    margin-left:auto;	
+    margin-right: auto;
+	color:  #0216F9;
+	font-family: Comic Sans MS;
+	font-size: 25px;
+} 
+
+
