@@ -60,7 +60,7 @@ li:hover>.sub-menu{
 	display:flex;
     flex-direction: column;	
  	list-style-type:none;
-	margin-top:15px;
+	margin-top:10px;
 	margin-left:-45px;
 	padding-left: -45px;
 }
@@ -100,17 +100,50 @@ li:hover>.sub-menu{
 	margin-left: 5%;
     padding-left: 5%;
 }
+
 .form {
     margin-left: 30%;
 	color:  #0216F9;
 	font-family: Comic Sans MS;
 	font-size: 25px;
-    padding-left: 1%;
+    padding: 20px;
 	width:  40%;
 	border-bottom-color: #0216F9;
 	border-radius: 25px;
-	background-color: rgba(188, 230, 225, 0.65);
+	background-color: rgba(188, 230, 225, 1);
+	box-shadow: 2px 0 1 1px black; 
 }
+
+.block {
+	display: none;
+}
+
+.block:target {
+	display: block;
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	opacity: 0.5;
+	background-color: gray;
+}
+
+.autoreg{
+    display: none;
+}	
+.block:target+.autoreg {
+    display: block;
+	position: fixed;
+	top:55px;
+	left:55px;
+	right:55px;
+	bottom:55px;
+	box-shadow: 2px 0 1 1px black; 
+	z-index:5;
+}
+
+
 .continer {
 	display: flex;
 	margin-left: auto;
@@ -138,15 +171,24 @@ li:hover>.sub-menu{
     margin-right: auto;
 	
 }
-.slider-item:target{
-display: block;	
-}
+
+
 .slider-item {
 	display: none;	
 }
+.slider-item:target {
+	display: block;	
+}
 
 
 
+.slider-item: target~div {
+	display: none;	
+}
+
+.vid {
+	display: block;
+}
 .imgslider {
 	width: 100px;	
     margin-left:auto;	
@@ -155,5 +197,14 @@ display: block;
 	font-family: Comic Sans MS;
 	font-size: 25px;
 } 
+.slidspan {
+	display: block;
+	position: absolute;
+	top:55px;
+	left:55px;
+	right:55px;
+	bottom:55px;
+	
+}
 
 

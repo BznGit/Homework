@@ -14,7 +14,7 @@
 				<li class="menu"><a class="a-underline vis" href="About.html" target="_self">О лодках</a></li>
 				<li class="menu"><a class="a-underline" target="_self">Войти</a>
 					<ul class="sub-menu">	
-						<li  ><a class="menu a-underline vis" href="Autorization.html" target="_self">Авторизация</a></li>
+						<li ><a class="menu a-underline vis" href="#signin">Авторизация</a></li>
 						<li  ><a class="menu a-underline vis" href="Registration.html" target="_self">Регистрация</a></li>
 					</ul>
 				</li>
@@ -22,18 +22,43 @@
 				<li class="menu"><a class="a-underline vis" href="Contacts.html" target="_self">Контакты</a></li>
 			</ul>
 		</div>	
-
 		
+		<div  class="block" id="signin">
+		</div>
+		<div class="autoreg" id="signin">
+			<form class="form">
+			
+				<legend >Введите:</legend>
+				<span>
+				<br>
+					<label for="email">Введите email:</label>
+					<input align="center" type="email" name="email" value="bez-al@mail.ru" autofocus required>
+				<br>
+				<br>
+					<label for="password" >Введите пароль:</label>
+					<input type="password" name="password" maxlength="4" value="1234" required >
+				<br>
+				<br>
+					<button  type="submit" class="contacts">Войти</button>
+					<a href="#" >Назад</a>
+				</span>
+			  
+			</form>
+		</div>
+		 
 		<div style="z-index:3">
 			<ul class="slider">
-				<li ><img class="slider-item vid" src="../Images/Катер 2019/DSC07423.JPG" height="500" width="900" id="img1"></li>
+				<img class="vid" src="../Images/Катер 2019/DSC07423.JPG" height="500" width="900" id="img1">
+				<li ><img class="slider-item" src="../Images/Катер 2019/DSC07423.JPG" height="500" width="900" id="img1"></li>
 				<li ><img class="slider-item"src="../Images/Катер 2019/DSC07424.JPG" height="500" width="900" id="img2"></li>
 				<li ><img class="slider-item"src="../Images/Катер 2019/DSC07425.JPG" height="500" width="900" id="img3"></li>
 				<li ><img class="slider-item"src="../Images/Катер 2019/DSC07426.JPG" height="500" width="900" id="img4"></li>
+				
 			</ul>
+			
 	    </div>
 		<div class="imgslider">
-			<a href="#img1">1</a>
+			<a href="#img1 ">1</a>
 			<a href="#img2">2</a>
 			<a href="#img3">3</a>
 			<a href="#img4">4</a>
