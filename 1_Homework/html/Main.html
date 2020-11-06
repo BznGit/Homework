@@ -3,13 +3,14 @@
 	<head>
 		<link rel="stylesheet" href="../CSS/Mystyle.css">
 		<meta charset="utf-8">
+		<meta name="viewport" content="device-width">
 		<title>Прогулки на катере</title>
 	</head>
 	<body class="body" >
 		
-		<h1  class="zagolovok">Прогулки на катере по Ладожскому Озеру</h1>
+		<h1  class="zagolovok">Прогулки по Ладожскому Озеру</h1>
 		
-		<div style=" diswidth: 90%  ;margin-right:auto ;margin-left:auto" >
+		<div class="block-menu">
 			<ul class="ul-pos">
 				<li class="menu"><a class="a-underline vis" href="About.html" target="_self">О лодках</a></li>
 				<li class="menu"><a class="a-underline" target="_self">Войти</a>
@@ -25,17 +26,17 @@
 		
 		<div  class="block" id="signin">
 		</div>
-		<div class="autoreg" id="signin">
+		<div class="autoreg" >
 			<form class="form">
 			
-				<legend >Введите:</legend>
+				<legend style="text-decoration:underline">Введите:</legend>
 				<span>
 				<br>
-					<label for="email">Введите email:</label>
+					<label for="email">E-mail:</label>
 					<input align="center" type="email" name="email" value="bez-al@mail.ru" autofocus required>
 				<br>
 				<br>
-					<label for="password" >Введите пароль:</label>
+					<label for="password" >Пароль:</label>
 					<input type="password" name="password" maxlength="4" value="1234" required >
 				<br>
 				<br>
@@ -51,7 +52,7 @@
 			<input id="w2" type="hidden">
 			<input id="w3" type="hidden">	
 			<input id="w4" type="hidden">				
-			<h2 class="slider__text">Фото-галлерея</h2>
+			<h2 class="slider__text">Фoто-галлерея</h2>
 			<img class="slider-item" src="../Images/Катер 2019/DSC07423.JPG" id="img1">
 			<img class="slider-item" src="../Images/Катер 2019/DSC07424.JPG"  id="img2">
 			<img class="slider-item" src="../Images/Катер 2019/DSC07425.JPG"  id="img3">
