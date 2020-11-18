@@ -28,18 +28,20 @@ for (let i = 1; i<=3; i++){
 	for (let j = 1; j<=3; j++) {
 		body+=imgstartDiv + ((area[count] == 1)?  imgX : "") + ((area[count] == 0)? imgO : "") + ((area[count] == null)? imgEmpty : "") + endDiv;
 		count++;
-	}
+	}s
 	body+=endDiv;
 }
 console.log(body);
 document.write(mainStartDiv + body + endDiv);*/
 
 // Задача 3 ----------------------------
-/*let area = [12,4,3,10,1,20];
+/*let area = [12,20,3,10,4,1];
 let len = area.length-1;
-let min = null, max = null;
+let min = area[0];
+let max = area[0];
 for (let i = 0; i<=len; i++) {
-	(area[i] < area[i+1])? min = area[i] : max = area[i];
+	(area[i] < min)? min = area[i] : min = min;
+	(area[i] > max)? max = area[i] : max = max;
 }
 alert( area + "\n" + "min = " + min + ", max = " +   max);*/
 
@@ -65,7 +67,7 @@ for (let i = 1; i<=len; i++) {
 
 alert("Число счастливых билетиков\n в рулоне от 000001 до 999999 равно: " + count);*/
 
-
+// Задача 5* ----------------------------
 
 
 
