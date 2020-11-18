@@ -68,9 +68,36 @@ for (let i = 1; i<=len; i++) {
 alert("Число счастливых билетиков\n в рулоне от 000001 до 999999 равно: " + count);*/
 
 // Задача 5* ----------------------------
+let weights = [2,7,4,1,8,1];
+let i = 1;
+while (weights.length > 1){
+	
+	console.log(i +" итерация----------------------");
+	i++;
+	// Поиск певой малекулы ------------------------------------------------------
+	let max = weights[0];
+	let len = weights.length;
+	for (let i = 0; i<=len; i++) (weights[i] > max)? max = weights[i] : max = max;
+	let tempA = max;
+	console.log(tempA);
+	let indx = weights.indexOf(max);
+	weights.splice(indx, 1);
+	// Поиск второй малекулы ------------------------------------------------------
+	max = weights[0];
+	len = weights.length;
+	for (let i = 0; i<=len; i++) (weights[i] > max)? max = weights[i] : max = max;
+	let tempB = max;
+	console.log(tempB);
+	indx = weights.indexOf(max);
+	weights.splice(indx, 1);
+	console.log(weights);
+	//проверка анигиляции ---------------------------------------------------
+	let temp = tempA-tempB;
+	console.log(temp);
+	(temp == 0)? console.log("анигиляция") : weights.unshift(temp);
+	console.log(weights);
+	
 
-
-
-
+}
 
 
