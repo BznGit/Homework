@@ -58,35 +58,35 @@ let str = prompt("введите день недели: ");
 if (str.includes("п") && str.includes("н")) { str = "понедельник"
 	let regexp = new RegExp(str, "ig");
 	let result = week.match(regexp);
-	alert(result);
+	console.log(result);
 }
 if (str.includes("в") && str.includes("т")) { str = "вторник"
 	let regexp = new RegExp(str, "ig");
 	let result = week.match(regexp);
-	alert(result);
+	console.log(result);
 }
 if (str.includes("с") && str.includes("р")) { str = "среда"
 	let regexp = new RegExp(str, "ig");
 	let result = week.match(regexp);
-	alert(result);
+	console.log(result);
 }
 if (str.includes("ч") && str.includes("т")) { str = "четверг"
 	let regexp = new RegExp(str, "ig");
 	let result = week.match(regexp);
-	alert(result);
+	console.log(result);
 }
 if (str.includes("п") && str.includes("т")) { str = "пятница"
 	let regexp = new RegExp(str, "ig");
 	let result = week.match(regexp);
-	alert(result);
+	console.log(result);
 }
 if (str.includes("с") && str.includes("б")) { str = "суббота"
 	let regexp = new RegExp(str, "ig");
 	let result = week.match(regexp);
-	alert(result);
+	console.log(result);
 }
 if (str.includes("в") && str.includes("с")) { str = "воскресенье"
 	let regexp = new RegExp(str, "ig");
 	let result = week.match(regexp);
-	alert(result);
+	console.log(result);
 }
