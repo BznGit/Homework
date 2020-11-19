@@ -54,39 +54,25 @@ alert("Ваш пароль соответсвует требованиям бе�
 // Задача 4 --------------------------
 let week ="Понедельник Вторник Среда Четверг Пятница Суббота Воскресенье";
 let str = prompt("введите день недели: ");
+let temp = "";
+regExp = /пн|ПН/ig
+if  (regExp.test(str)) temp = "понедельник";
+regExp = /вт|Вт/ig
+if  (regExp.test(str)) temp = "втроник";
+regExp = /ср|СР/ig
+if  (regExp.test(str)) temp = "среда";
+regExp = /чт|ЧТ/ig
+if  (regExp.test(str)) stemp = "четверг";
+regExp = /пт|ПТ/ig
+if  (regExp.test(str)) temp = "пятница";
+regExp = /сб|СБ/ig
+if  (regExp.test(str)) temp = "суббота";
+regExp = /вс|ВС/ig
+if  (regExp.test(str)) temp = "воскресенье";
 
-if (str.includes("п") && str.includes("н")) { str = "понедельник"
-	let regexp = new RegExp(str, "ig");
-	let result = week.match(regexp);
-	console.log(result);
-}
-if (str.includes("в") && str.includes("т")) { str = "вторник"
-	let regexp = new RegExp(str, "ig");
-	let result = week.match(regexp);
-	console.log(result);
-}
-if (str.includes("с") && str.includes("р")) { str = "среда"
-	let regexp = new RegExp(str, "ig");
-	let result = week.match(regexp);
-	console.log(result);
-}
-if (str.includes("ч") && str.includes("т")) { str = "четверг"
-	let regexp = new RegExp(str, "ig");
-	let result = week.match(regexp);
-	console.log(result);
-}
-if (str.includes("п") && str.includes("т")) { str = "пятница"
-	let regexp = new RegExp(str, "ig");
-	let result = week.match(regexp);
-	console.log(result);
-}
-if (str.includes("с") && str.includes("б")) { str = "суббота"
-	let regexp = new RegExp(str, "ig");
-	let result = week.match(regexp);
-	console.log(result);
-}
-if (str.includes("в") && str.includes("с")) { str = "воскресенье"
-	let regexp = new RegExp(str, "ig");
-	let result = week.match(regexp);
-	console.log(result);
-}
+let regexp = new RegExp(temp, "ig");
+let result = week.match(regexp);
+console.log(result);
+
+
+
