@@ -36,43 +36,40 @@ while (!password) {
 		alert("Нет прописных букв!") ;
 		good = false;	
 	}
-	// проверка двух цифр ----------------------
-	regExp = /\d{3}/g;
+	// проверка трех цифр ----------------------
+	regExp = /(\d.*\d.*\d.*)/g;
 	if (!regExp.test(password)){
 		alert("Нет трех цивр!") ;
 		good = false;	
 	}
 	// проверка символов ------------------------
-	regExp = /(@|!|#|%|-|_|\.|\?|\$|)/g; 
-	if (!regExp.test(password)){
+	regExp = /(@|!|#|%|-|_|\.|\?|\$)/g;
+ 	if (!regExp.test(password)){
 		alert("Нет специальных символов:\n !, @, #, $, %, ^, &, *, ., -, _, |,?") ;
 		good = false;	
 	}
 	if (good == false) password = null; 
 }
-alert("Ваш пароль соответсвует требованиям безопасности!")*/
-// Задача 4 --------------------------
+alert("Ваш пароль соответсвует требованиям безопасности!");
+// Задача 4 --------------------------*/
 let week ="Понедельник Вторник Среда Четверг Пятница Суббота Воскресенье";
-let str = prompt("введите день недели: ");
-let temp = "";
-regExp = /пн|ПН/ig
-if  (regExp.test(str)) temp = "понедельник";
-regExp = /вт|Вт/ig
-if  (regExp.test(str)) temp = "втроник";
-regExp = /ср|СР/ig
-if  (regExp.test(str)) temp = "среда";
-regExp = /чт|ЧТ/ig
-if  (regExp.test(str)) stemp = "четверг";
-regExp = /пт|ПТ/ig
-if  (regExp.test(str)) temp = "пятница";
-regExp = /сб|СБ/ig
-if  (regExp.test(str)) temp = "суббота";
-regExp = /вс|ВС/ig
-if  (regExp.test(str)) temp = "воскресенье";
-
-let regexp = new RegExp(temp, "ig");
-let result = week.match(regexp);
-console.log(result);
-
-
-
+//let str = prompt("введите день недели: ");
+let str = "подельник";
+let temp_reg = [];
+let word = "";
+for (let i = 0; i<str.length; i++){
+	temp_reg = str.split("");
+	let regexp = new RegExp(temp_reg[i]+temp_reg[i+1], "ig");
+	if (regexp.test(week)){
+		 word += (temp_reg[i] + temp_reg[i+1])+"!";
+		 i++;
+	}
+}
+	let prom = word.split("!");
+	console.log(prom);
+	word = "";
+	for (let i = 0; i<prom.length-1; i++) word+="[" + prom[i] + "]*";
+	console.log(word);
+	let regexp2 = new RegExp(word, "ig");
+	let result = week.match(regexp2);
+	console.log(result);
