@@ -93,22 +93,18 @@ console.log("Задача 3");
 	
 */
 
-/*
-// Задача 4 ------------------------------------
-console.log("Задача 4");
-for (let i = 1; i <= 100; i++) {
-	if (i%3 == 0 && i%5 == 0) console.log("ThreeFive") 
-		else {
-		if (i%3 == 0) console.log("Three") 
-			else {
-				if (i%5 == 0) console.log("Five")
-					else console.log(i)
-				} 			
-			}
-	
-}
 
+// Задача 4 ------------------------------------
+/*console.log("Задача 4");
+for (let i = 1; i <= 100; i++) {
+	if (i%3 == 0 && i%5 == 0) console.log("ThreeFive");else {
+		if (i%3 == 0) console.log("Three"); else {
+			if (i%5 == 0) console.log("Five"); else console.log(i)
+		} 			
+	}	
+}
 */
+
 /*
 // Задача 5* ------------------------------------
 console.log("Задача 5*");
@@ -128,7 +124,7 @@ else alert(god + " -  не високосный год");
 
 
 */
-
+/*
 // Задача 6 ------------------------------------
 console.log("Задача 6");
 let tarelki = null;
@@ -147,7 +143,9 @@ let sredstvo = null;
 		if (ostatok <0) break;
 		console.log("тарелок: " + i + " остаток средства - " +ostatok + " грамм");	
 	
-	}
+	}*/
+
+
 	
 	
 	

@@ -34,16 +34,20 @@ for (let i = 1; i<=3; i++){
 console.log(body);
 document.write(mainStartDiv + body + endDiv);*/
 
-// Задача 3 ----------------------------
-/*let area = [12,20,3,10,4,1];
+/*// Задача 3 ----------------------------
+let area = [12,20,3,10,4,1];
 let len = area.length-1;
 let min = area[0];
 let max = area[0];
+
 for (let i = 0; i<=len; i++) {
-	(area[i] < min)? min = area[i] : min = min;
-	(area[i] > max)? max = area[i] : max = max;
+	if (area[i] < min) min = area[i];
+	if (area[i] > max) max = area[i];
 }
+area.splice(area.indexOf(max),1);
+area.splice(area.indexOf(min),1);
 alert( area + "\n" + "min = " + min + ", max = " +   max);*/
+
 
 // Задача 4* ----------------------------
 /*let len = 999999;
@@ -71,33 +75,21 @@ alert("Число счастливых билетиков\n в рулоне от
 let weights = [2,7,4,1,8,1];
 let i = 1;
 while (weights.length > 1){
-	
 	console.log(i +" итерация----------------------");
 	i++;
-	// Поиск певой малекулы ------------------------------------------------------
-	let max = weights[0];
 	let len = weights.length;
-	for (let i = 0; i<=len; i++) (weights[i] > max)? max = weights[i] : max = max;
-	let tempA = max;
-	console.log(tempA);
-	let indx = weights.indexOf(max);
-	weights.splice(indx, 1);
-	// Поиск второй малекулы ------------------------------------------------------
-	max = weights[0];
-	len = weights.length;
-	for (let i = 0; i<=len; i++) (weights[i] > max)? max = weights[i] : max = max;
-	let tempB = max;
-	console.log(tempB);
-	indx = weights.indexOf(max);
-	weights.splice(indx, 1);
 	console.log(weights);
-	//проверка анигиляции ---------------------------------------------------
+	weights.sort((a, b)=>a-b);
+	console.log(weights);
+	let tempA = weights.pop(); 
+	let tempB = weights.pop(); 
+	console.log(tempA);
+	console.log(tempB);
+	//проверка аннигиляции ---------------------------------------------------
 	let temp = tempA-tempB;
 	console.log(temp);
 	(temp == 0)? console.log("анигиляция") : weights.unshift(temp);
 	console.log(weights);
-	
-
 }
 
 
