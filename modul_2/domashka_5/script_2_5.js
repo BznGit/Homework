@@ -24,7 +24,7 @@ function range(begin, end, shag){
 }
 console.log( range(2, 90,10));*/
 // Задача 3 --------------------------
-/*let student = {
+let student = {
 	mame : "Вася",
 	surname : "Васильев",
 	age : 30,
@@ -38,15 +38,11 @@ console.log( range(2, 90,10));*/
 }
 console.log(student);
 function whoIs(object) {
-	console.log("Имя студента: " + object.name);
-	console.log("Фамилия студента: " + object.surname);
-	console.log("Возраст студента: " + object.age);
-	console.log("Интересы студента: " + object.interests);
-	console.log("Место учебы студента: " + object.studyPlace);
+	for (let key in object) console.log(key +": " + object[key]);
 }
-whoIs(student);*/
+whoIs(student);
 // Задача 4* ----------------------------------------------------
-let word = []; 
+/*let word = []; 
 let glasnye = ["а", "у", "о", "ы", "и", "э", "я", "ю", "ё", "е"];
 let gl = glasnye.length-1;
 let soGlasnye = ["б", "в", "г", "д", "ж", "з", "й", "к", "л", "м", "н", "п", "р", "с", "т", "ф", "х", "ц", "ч", "ш","щ"];
@@ -63,4 +59,4 @@ for (let i = 1; i < word.length; i++){
 }
 console.log(word);
 let slovo = word.join("")
-console.log(slovo);
+console.log(slovo);*/
