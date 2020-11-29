@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Homework 2.8</title>
+		<style>
+			.div {
+				display: inline-block;
+				background-color: red;
+				width: 200px;
+				height: 200px;
+				margin: 20px;
+			}
+
+			.class {
+				background-color: greenyellow;
+			}
+
+			.button {
+				display: inline-block;
+				background-color: blueviolet;
+				width: 200px;
+				height: 80px;
+				margin: 20px;
+				text-align: center;
+				color: cyan;
+			}
+
+			.coments {
+				display: none;
+				flex-direction: column;
+				font-family: 'Segoe UI';
+				overflow: auto;
+				height: 200px;
+			}
+
+			.items {
+				display: flex;
+				border-bottom: 1px solid blue;
+			}
+
+			.commity {
+				display: flex;
+			}
+
+			.memo {
+				height: 80px;
+				width: 100%;
+				resize: none
+			}
+
+			.bot {
+				display: inline-block;
+				height: 86px;
+				width: 29%;
+			}
+
+			.table {
+				border: 1px solid #399;
+				text-align: center;
+				padding: 10px;
+				border-collapse: collapse;
+				font-family: Tahoma;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="div"></div>
+		<div class="div"></div>
+		<div class="div"></div>
+		<div class="button">
+			<h1>0</h1>
+		</div>
+		<h3>Коментарии:</h3>
+		<div class="coments" id="comit">
+		</div>
+		<div class="commity">
+			<textarea class="memo" placeholder="Комментировать..."></textarea>
+			<button class="bot">Отправаить</button>
+		</div>
+		<br>
+
+		<script src="./script_2_8.js"></script>
+	</body>
+
+</html>
