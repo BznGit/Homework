@@ -21,7 +21,7 @@ function clock() {
 	if (sec<10) sec = "0" + sec;
 	div1.innerText = hour + " : " + min + " : " + sec;
 };*/
-
+/*
 // Задача 2 ----------------------------------------------------
 let cars = [{
 	image: "./Audi.jpg",
@@ -96,10 +96,10 @@ function renderCars(thing){
 		+ thing.price + " рублей";
 	contener.appendChild(about);
 	document.body.append(contener);
-}
+}*/
 
 // Задача 4 --------------------------------------------
-/*let colors = ["red", "yellow", "green"];
+/*let colors = ["red", "yellow", "yellowgreen"];
 for (let i = 0; i < colors.length; i++){
 	setsvetofor('gray');
 }
@@ -118,21 +118,24 @@ function setsvetofor(cvet){
 let cvet = document.getElementsByTagName("div");
 let i = 0;
 let timer = setInterval(clock, 1000);
+let down = true;
 function clock() {
-	cvet[i].style.backgroundColor = colors[i];
-	if (i == 2){
-		cvet[0].style.backgroundColor = 'gray';
-		cvet[1].style.backgroundColor = 'gray';
-	} 
-	if (i == 0){
-		cvet[2].style.backgroundColor = 'gray';
-	} 
-	i++;
-	if (i == 3) i = 0;
-}
+	if (down){
+		for (let j = 0; j < cvet.length; j++) {cvet[j].style.backgroundColor = "gray";}
+		cvet[i].style.backgroundColor = colors[i];
+		i++;
+		if ( i == 2) down = false;
+	} else{
+		for (let j = 0; j < cvet.length; j++) {cvet[j].style.backgroundColor = "gray";}
+		cvet[i].style.backgroundColor = colors[i];
+		i--;
+		if ( i == 0) down = true;	
+	}
+
+}*/
 
 // Задача 5 --------------------------------------------
-/*let div1 = document.createElement("div");
+let div1 = document.createElement("div");
 let text = document.createElement("h2");
 text .style.display = 'flex';
 text .style.justifyContent = 'center';
@@ -144,8 +147,10 @@ function clock() {
 	div1.style.fontSize = "150px";
 	div1.style.color = "red"
 	document.body.append(div1);
-	date1 = new Date();
-	date2 = new Date(2021, 0, 1, 0, 0, 0, 0);
+	let date1 = new Date();
+	let date2 = new Date(date1.getUTCFullYear()+1 , 0, 1, 0, 0, 0, 0);
+
+	console.log(date2);
 	let ost = date2 - date1;
 	let month =Math.trunc(ost/2592000000);
 	let temp = ost%2592000000;
@@ -181,4 +186,4 @@ imgCar.style.marginRight ="auto";
 imgCar.style.width ="1500px";
 imgCar.style.borderTopLeftRadius = '25px';
 imgCar.style.borderTopRightRadius = '25px';
-document.body.appendChild(imgCar);*/
+document.body.appendChild(imgCar);
