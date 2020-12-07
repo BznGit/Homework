@@ -120,14 +120,18 @@ function sort(e){
 		console.log(elem.id);
 	}
 	if (elem.id == "th3"){
-		books.sort((a, b) => a.autor < b.autor);
+		books.sort(function (a, b){if (a.autor < b.autor)	return -1;
+	  					if ( a.autor > b.autor) return 1; return 0});
 		console.log(elem.id);
 	}
 	if (elem.id == "th4"){
-		books.sort((a, b) => a.name < b.name);
+		books.sort(function (a, b){if (a.name < b.name)	return -1;
+			if ( a.name > b.name) return 1; return 0});
+		console.log(elem.id);
 	}
 	if (elem.id == "th5"){
-		books.sort((a, b) => a.description < b.description);
+		books.sort(function (a, b){if (a.autor < b.autor)	return -1;
+			if ( a.description > b.description) return 1; return 0});
 		console.log(elem.id);
 	}
 	if (elem.id == "th6"){
