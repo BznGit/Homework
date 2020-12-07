@@ -96,7 +96,7 @@ function renderBooksTable(thing){
 		
 		let tr = document.createElement("tr");	
 				
-		let td1 = document.createElement("dt");
+		let td1 = document.createElement("td");
 		td1.innerText = i+1;
 		tr.appendChild(td1);
 		td1.classList.add("table");
@@ -120,14 +120,14 @@ function sort(e){
 		console.log(elem.id);
 	}
 	if (elem.id == "th3"){
-		books.sort((a, b) => a.autor - b.autor);
+		books.sort((a, b) => a.autor < b.autor);
 		console.log(elem.id);
 	}
 	if (elem.id == "th4"){
-		books.sort((a, b) => a.name - b.name);
+		books.sort((a, b) => a.name < b.name);
 	}
 	if (elem.id == "th5"){
-		books.sort((a, b) => a.description - b.description);
+		books.sort((a, b) => a.description < b.description);
 		console.log(elem.id);
 	}
 	if (elem.id == "th6"){
