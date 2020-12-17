@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Homework 3.1</title>
+		<script src="./vue.js"></script>
+		<style>
+			body {
+				font-family: Tahoma;
+			}
+
+			h1 {
+				color: rgb(3, 0, 204);
+				text-align: center;
+			}
+
+			#app {
+				display: flex;
+				border-radius: 50px;
+				box-shadow:
+					inset rgb(5, 4, 4) -3px -3px 8px,
+					inset rgba(245, 242, 242, 0.9) 3px 3px 8px,
+					rgba(7, 2, 2, 0.8) 3px 3px 8px -3px;
+				width: 400px;
+				padding: 30px;
+			}
+
+			p {
+				color: black
+			}
+
+			img {
+				margin-left: auto;
+				margin-right: auto;
+				height: 200px;
+				left: 50%
+			}
+
+			span {
+				color: rgb(38, 6, 219);
+				font-weight: bold;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<h1>Наши пользователи</h1>
+		<div id="app">
+			<div>
+				<p><span>Имя: </span>{{user.name}}</p>
+				<p><span>Фамилия: </span>{{user.lastName}}</p>
+				<p><span>Возраст: </span>{{user.age}}</p>
+				<p><span>Логин: </span>{{user.login}}</p>
+				<p><span>Пароль: </span>{{user.password }} </p>
+			</div>
+			<img v-bind:src="user.avatar">
+
+		</div>
+
+		<script src="./script_3_1.js"></script>
+	</body>
+
+</html>

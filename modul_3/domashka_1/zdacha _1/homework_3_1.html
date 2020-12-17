@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Homework 3.1</title>
+		<script src="./vue.js"></script>
+		<style>
+			body {
+				font-family: Tahoma;
+			}
+
+			h1 {
+				color: rgb(219, 6, 202);
+				text-align: center;
+			}
+
+			#app {
+				display: flex;
+				border: 1px solid rgb(219, 6, 202);
+				border-radius: 30px;
+				width: 600px;
+				padding: 30px;
+			}
+
+			p {
+				color: black
+			}
+
+			img {
+				margin-left: auto;
+				margin-right: auto;
+				height: 200px;
+				left: 50%
+			}
+
+			span {
+				color: rgb(219, 6, 202);
+				font-weight: bold;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<h1>
+			ДНС
+			<br>
+			интернет-магазин компьютерной техники
+		</h1>
+		<div id="app">
+
+			<div>
+				<p><span>Тип: </span>{{product.type}}</p>
+				<p><span>Производитель: </span>{{product.company}}</p>
+				<p><span>Модель: </span>{{product.model}}</p>
+				<p><span>Год: </span>{{product.year}}</p>
+				<p><span>Цена: </span>{{product.price }} {{String.fromCharCode(8381)}}</p>
+			</div>
+			<img v-bind:src="product.image">
+
+		</div>
+
+		<script src="./script_3_1.js"></script>
+	</body>
+
+</html>
