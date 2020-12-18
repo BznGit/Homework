@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Homework 3.1</title>
+		<script src="./vue.js"></script>
+		<style>
+			body {
+				font-family: Tahoma;
+			}
+
+			h1 {
+				color: rgb(3, 0, 204);
+				text-align: center;
+			}
+
+			#app {
+				display: block;
+			}
+
+			.menu>li {
+				display: inline-flex;
+				text-decoration: none;
+				margin: 20px;
+			}
+
+			.cat {
+				display: block;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<h1>Магазин</h1>
+		<div id="app">
+			<ul class="menu">
+				<li id="1" v-on:click="change">Каталог</li>
+				<li id="2" v-on:click="change">Корзина</li>
+				<li id="3" v-on:click="change">Избраное</li>
+			</ul>
+			<div v-if="catalog.visible">
+				<ul class="cat">
+					<li>Ноутбуки</li>
+					<li>Телевизоры</li>
+					<li>Телефоны</li>
+					<li>Компьютеры</li>
+				</ul>
+			</div>
+			<div v-if="cart.visible">
+				Всего куплено товаров
+			</div>
+			<div v-if="favorite.visible">
+				ноутбук, копьютер
+			</div>
+		</div>
+
+
+		<script src="./script_3_2.js"></script>
+	</body>
+
+</html>

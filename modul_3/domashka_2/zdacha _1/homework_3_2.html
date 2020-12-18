@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Homework 3.2</title>
+		<script src="./vue.js"></script>
+		<style>
+			body {
+				font-family: Tahoma;
+			}
+
+			h1 {
+				color: rgb(38, 6, 219);
+				text-align: center;
+			}
+
+			#app {
+			
+				border: 1px solid rgb(70, 6, 219);
+				border-radius: 30px;
+				width: 600px;
+				padding: 30px;
+			}
+
+			p {
+				color: black
+			}
+
+
+		</style>
+	</head>
+
+	<body>
+		<h1>Лекции</h1>
+		<div id="app">
+			<p>Лекция  {{lection.id}}. {{lection.name}} </p>
+			<p v-html = "lection.quastions" ></p>
+			<label>Содержание:</label>
+			<button v-on:click="lection.visible=!lection.visible">{{lection.visible?'Скрыть':'Показать'}}</button>
+			<p v-if = "lection.visible">{{lection.content}}</p>
+		</div>
+
+		<script src="./script_3_2.js"></script>
+	</body>
+
+</html>
