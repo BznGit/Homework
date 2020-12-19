@@ -36,11 +36,11 @@
 		<h1>Магазин</h1>
 		<div id="app">
 			<ul class="menu">
-				<li id="1" v-on:click="change">Каталог</li>
-				<li id="2" v-on:click="change">Корзина</li>
-				<li id="3" v-on:click="change">Избраное</li>
+				<li v-on:click="name = 'catalog'">Каталог</li>
+				<li v-on:click="name = 'cart'">Корзина</li>
+				<li v-on:click="name = 'favorite'">Избраное</li>
 			</ul>
-			<div v-if="catalog.visible">
+			<div v-if="name == 'catalog'">
 				<ul class="cat">
 					<li>Ноутбуки</li>
 					<li>Телевизоры</li>
@@ -48,10 +48,10 @@
 					<li>Компьютеры</li>
 				</ul>
 			</div>
-			<div v-if="cart.visible">
+			<div v-if="name == 'cart'">
 				Всего куплено товаров
 			</div>
-			<div v-if="favorite.visible">
+			<div v-if="name == 'favorite'">
 				ноутбук, копьютер
 			</div>
 		</div>
