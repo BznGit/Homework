@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Homework 3.4</title>
+		<script src="./vue.js"></script>
+		<style>
+	
+			#app {
+
+				border: 1px solid rgb(70, 6, 219);
+				border-radius: 30px;
+				width: 600px;
+				padding: 30px;
+				font-family: Tahoma;
+			}
+			input{
+				float:right;
+			}
+			li{
+				border-bottom: 1px solid rgb(70, 6, 219);
+			}
+
+	
+
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<h4>Наши услуги</h4>
+			<ul>
+				<li v-for = "service in services">
+					{{service.titel}} - {{service.cost}} руб.
+					<input  type="checkbox" v-bind:value = "service.cost" v-model = "totalCost">
+				</li>
+			</ul>
+			<span>Общая стоимоть {{summ}} руб. </span>
+
+
+		</div>
+
+		<script src="./script_3_4.js"></script>
+	</body>
+
+</html>
