@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Homework 3.4</title>
+		<script src="./vue.js"></script>
+		<style>
+			.head {
+				display: flex;
+				flex-direction: row;
+			}
+
+			.edit {
+				width: 80%;
+				margin-left: 250px;
+				height: 30px;
+				font-size: 20px;
+			}
+
+			button {
+				right: 0;
+				height: 36px;
+				width: 80px;
+				margin-left: 30%;
+				padding: 0;
+			}
+
+			.list {
+				display: flex;
+
+				border-bottom: 1px solid rgb(70, 6, 219);
+				border-radius: 30px;
+				width: 100%;
+				padding: 2px;
+				font-family: Tahoma;
+				margin: auto;
+				margin-top: 10px;
+				justify-content: stretch;
+			}
+
+			.grid {
+				display: inline-block;
+				border: 1px solid rgb(70, 6, 219);
+				border-radius: 30px;
+				width: 250px;
+				margin: 20px;
+
+
+			}
+
+			img {
+				width: 200px;
+				margin: 20px;
+				border-radius: 10px;
+			}
+
+			.img {
+				display: flex;
+				justify-content: center;
+				width: 210px;
+				
+
+			}
+
+			.descr {
+				display: flex;
+				flex-direction: column;
+
+			}
+
+			p {
+				margin: 0;
+				padding: 0;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="head">
+				<input type="text" class="edit" placeholder="Введите текст для поиска" v-on:input="search">
+				<button v-on:click="isActive=!isActive">{{isActive?'Список':'Таблица'}}</button>
+			</div>
+			<span  v-for="article in articles" >
+				<div v-bind:class={grid:isActive} class="list" v-if="article.visible">
+					<div class="img">
+						<a v-bind:href="article.url"><img v-bind:src="article.image"></a>
+					</div>
+					<div v-show="!isActive" class="descr">
+						<h3><a v-bind:href="article.url">{{article.titel}}</a></h3>
+						<p>{{article.description}}</p>
+					</div>
+				</div,;qwe'
+				cf.wdm,;12AQEBV 12rh,.'
+				'>
+			</span>
+		</div>
+		<script src="./script_3_4.js"></script>
+	</body>
+
+</html>
