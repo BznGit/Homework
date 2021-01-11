@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Homework 3.5.3</title>
+		<script src="./vue.js"></script>
+		<style>
+			body {
+				font-family: Tahoma;
+			}
+
+			h1 {
+				margin-left: auto;
+				margin-right: auto;
+				width: 500px;
+				color: blue;
+			}
+
+			#app {
+				display: flex;
+			}
+
+			.add {
+
+				margin-top: auto;
+				margin-bottom: auto;
+				margin-left: auto;
+				margin-right: auto;
+				width: 100px;
+			}
+
+			.rel {
+				position: relative;
+				margin-left: 10px;
+				margin-right: auto;
+
+			}
+
+			.item {
+
+				width: 300px;
+			}
+
+			.del {
+				position: absolute;
+				left: 265px;
+				top: 255px;
+				width: 50px;
+				z-index: 1000;
+			}
+
+			.modal {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				position: fixed;
+				padding: 30px;
+				box-shadow: 5px 10px 10px -7px #000000, 10px 8px 11px 5px rgba(0, 0, 0, 0);
+				left: 40%;
+				top: 30%;
+				background-color: azure;
+				border-radius: 30px;
+
+				width: 300px;
+			}
+
+			input {
+				margin-top: 20px;
+			}
+
+			button {
+				margin-top: 20px;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<h1>Галлерия автомобилей</h1>
+		<div id="app">
+			<oneimage @delet-item="handlerDelete" @del-vis="handlerVis" v-bind:images="images">
+			</oneimage>
+			<gallary @add-it="handlerAdd" v-bind:images="images"></gallary>
+		</div>
+		<script src="./script_3_5.js"></script>
+	</body>
+
+</html>

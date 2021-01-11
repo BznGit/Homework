@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Homework 3.5</title>
+		<script src="./vue.js"></script>
+		<style>
+			body {
+				font-family: Tahoma;
+			}
+
+			h1 {
+				margin: 100px;
+				rotate: 90deg;
+				color: rgb(10, 2, 248);
+				text-align: center;
+				transition: font-size 0.9s ease-in-out;
+			}
+
+			.d {
+				font-size: 0;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<carousel v-bind:idioms="idioms"></carousel>
+		</div>
+		<script src="./script_3_5.js"></script>
+	</body>
+
+</html>
