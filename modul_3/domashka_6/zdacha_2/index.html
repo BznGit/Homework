@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Homework 6.1</title>
+        <meta charset="utf-8" />
+        <script src="./vue.js"></script>
+        <script src="./VueRouter.js"></script>
+        <style>
+            h2 {
+                display: 70%;
+                margin: 10px;
+            }
+
+            p {
+                display: flex;
+                width: 100%;
+                margin: 10px;
+            }
+
+            ul {
+                display: flex;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: larger;
+
+            }
+
+            li {
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin: 0px;
+                text-decoration: none;
+                width: 25%;
+
+            }
+
+            .products {
+                display: flex;
+                flex-direction: row;
+            }
+
+
+
+            .card {
+                display: flex;
+                float: left;
+                margin-left: auto;
+                margin-right: auto;
+                margin: 30px;
+                padding: 20px;
+                border-radius: 20px;
+                box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+            }
+
+            img {
+                margin: 10px;
+            }
+
+
+            .item {
+                display: inline-flex;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 20px;
+                box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+                width: 70%;
+                height: 100%;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div id="app">
+            <menucmp></menucmp>
+            <router-view :categories="categories" :phones="phones" :computers="computers"></router-view>
+            <!--<router-view :categories="categories phones, computers"></router-view>-->
+        </div>
+        <script src="./script_3_6.js"></script>
+        <h1></h1>
+    </body>
+
+</html>

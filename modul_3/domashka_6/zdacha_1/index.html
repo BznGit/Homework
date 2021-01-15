@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Homework 6.1</title>
+        <meta charset="utf-8" />
+        <script src="./vue.js"></script>
+        <script src="./VueRouter.js"></script>
+       <style>
+           ul{
+               display: flex;
+               width: 80%;
+               margin-left: auto;
+               margin-right: auto;
+               font-size: larger;
+              
+           }
+           li{
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin: 0px;
+                text-decoration: none;             
+                width:25%;         
+                
+           }
+         </style>
+
+    </head>
+
+    <body>
+        <div id="app">
+            <menucmp></menucmp>
+            <router-view></router-view>
+        </div>
+        <script src="./script_3_6.js"></script>
+  
+    </body>
+
+</html>
