@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Homework 3.1</title>
+		<script src="./vue.js"></script>
+		<style>
+			body {
+				font-family: Tahoma;
+			}
+
+			h1 {
+				color: rgb(3, 0, 204);
+				text-align: center;
+			}
+
+			#app {
+				display: block;
+			}
+
+			.menu>li {
+				display: inline-flex;
+				text-decoration: none;
+				margin: 20px;
+			}
+
+			.cat {
+				display: block;
+			}
+			
+.bounce-enter-active {
+    animation: shake 0.72s cubic-bezier(.37,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
+@keyframes shake {
+    10%, 90% {
+        color: red;
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        color: red;
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+		</style>
+	</head>
+
+	<body>
+		<h1>Магазин</h1>
+		<div id="app">
+			<ul class="menu">
+				<li v-on:click="name = 'catalog'">Каталог</li>
+				<li v-on:click="name = 'cart'">Корзина</li>
+				<li v-on:click="name = 'favorite'">Избраное</li>
+			</ul>
+			<transition name="bounce" mode="out-in">
+				<div v-if="name == 'catalog'">
+					<ul class="cat">
+						<li>Ноутбуки</li>
+						<li>Телевизоры</li>
+						<li>Телефоны</li>
+						<li>Компьютеры</li>
+					</ul>
+				</div>
+			</transition>
+			<transition name="bounce" mode="out-in">
+				<div v-if="name == 'cart'">
+					Всего куплено товаров
+				</div>
+			</transition>
+			<transition name="bounce" mode="out-in">
+				<div v-if="name == 'favorite'">
+					ноутбук, копьютер
+				</div>
+			</transition>	
+			
+			
+		</div>
+
+
+		<script src="./script_3_2.js"></script>
+	</body>
+
+</html>

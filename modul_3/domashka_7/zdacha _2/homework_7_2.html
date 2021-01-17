@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Homework 7.2</title>
+		<script src="./vue.js"></script>
+		<style>
+			h2 {
+				padding: 0;
+				margin: 0;
+
+			}
+
+			.cell {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 5px;
+				padding: 0;
+				cursor: pointer;
+				height: 50px;
+				width: 50px;
+				border: 1px solid rgb(6, 3, 175);
+				border-radius: 5px;
+				font-weight: bolder;
+				margin-right: -1px;
+				margin-bottom: -1px;
+
+			}
+
+
+			h1,
+			h2 {
+				margin-top: 10px;
+				margin-bottom: 0;
+				margin-left: auto;
+				margin-right: auto;
+				width: max-content;
+				color: rgb(168, 4, 168);
+
+			}
+
+			.main {
+				display: flex;
+				flex-wrap: wrap;
+				margin-top: 10px;
+				margin-bottom: 0;
+				margin-left: auto;
+				margin-right: auto;
+				width: 610px;
+				height: max-content;
+			}
+
+			.buttont-cont {
+				display: flex;
+				align-items: center;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 10px;
+				width: max-content;
+			}
+
+			.cell:nth-child(3n) {
+				margin-right: 0;
+			}
+
+			.cell:nth-child(27n) {
+				margin-bottom: 0;
+			}
+
+			.cell-move {
+				transition: transform 1s;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<h1>The order game</h1>
+
+		<div id="app">
+			<h2>Current step: {{startValue}}</h2>
+			<div>
+				<transition-group name="cell" tag="div" class="main">
+					<div class="cell" v-for="cell in pole" :key="cell"
+						:style="{color: cell.style.color, fontSize: cell.style.fontSize }" @click="choose">
+						{{cell.value}}
+					</div>
+				</transition-group>
+			</div>
+			<div class="buttont-cont">
+				<button style="margin: 5px;" @click="shuffle">Shuffle</button>
+				<button style="margin: 5px;" @click="restart">Restart</button>
+			</div>
+		</div>
+
+
+		</div>
+
+		<script src="./script_7_2.js"></script>
+	</body>
+
+</html>
