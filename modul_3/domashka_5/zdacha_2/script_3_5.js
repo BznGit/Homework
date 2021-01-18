@@ -8,6 +8,7 @@ let app = Vue.createApp({
 				'"Глядя на некоторых людей, понимаешь, как сильно их корона сдавила им мозг"',
 				'"Дела шли хорошо, но неизвестно куда."',
 			],
+			interval: 3000
 		}
 	},
 
@@ -21,14 +22,14 @@ let app = Vue.createApp({
 	
 });
  app.component('carousel',{
-	props:['idioms'],
+	props:['idioms', 'interval'],
 	data(){
 		return{
 			i:0,
 			isActive: false,
 		}
 	},
-	template: `<h1  v-bind:class={d:isActive}>{{idioms[this.i]}}</h1>`,
+	template: `<h1  v-bind:class={d:isActive}>{{this.idioms[this.i] }}</h1>`,
 
 	methods:{
 			updateList(){
@@ -37,12 +38,13 @@ let app = Vue.createApp({
 				this.isActive = !this.isActive;
 				
 				if (this.i == 3) this.i = 0;				
-			}, 3000);
+			}, this.interval);
 		},
 	
 	},
 	mounted(){
-		this.updateList()
+		this.updateList();
+		
 	}
 
 
