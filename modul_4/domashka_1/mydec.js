@@ -1,26 +1,37 @@
 
 // Zadacha 1-----------------------------
-function ass(){
-    console.log('Функция выполнилась с задержкой в 2 секунды!')
+let mainF = function(){
+    console.log('Функция выполнилась')
 };
 
-function paused(func, int){
-    let delay = int*1000;
-    return  setTimeout(func, delay)
+function paused(func){    
+    return function(delay){ 
+        setTimeout(func, delay*1000);        
+    }  
 }
-paused(ass, 2);
+mainF = paused(mainF);
+mainF(3)
 
-// Zadacha 1-----------------------------
+// Zadacha 2-----------------------------
 
-function mas(){   
+let mas = function (){   
     return [1,2,3,4];
 }
 
-function check(func,...name){
+function return_object(func,...name){
     let mass=func();
     let obj={};
-    for (let i=0; i<mass.length; i++)
-        obj[name[i]]=mass[i];   
-    return obj;
+    if (Array.isArray(mass)){
+        return function(){       
+            for (let i=0; i<mass.length; i++)
+                    obj[name[i]]=mass[i];   
+            return obj;
+        }
+    } else return func() 
 }
-console.log(check(mas,'a','b', 'c', 'd')); 
+
+let r = return_object(mas, 'q','w','e', 'r')
+console.log(r());
+
+
+

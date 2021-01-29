@@ -29,9 +29,9 @@ const server = http.createServer((request, response)=>{
                     response.end();
                 } else {
                     console.log(`The file 'header.html' is read and sent to the client\n`);
+                    response.write(data3);
                     response.write(data1);
                     response.write(data2);
-                    response.write(data3);
                     response.end();    
                     console.log("Request accepted!");
                 }
