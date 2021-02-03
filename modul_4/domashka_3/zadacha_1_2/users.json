@@ -1,0 +1,20 @@
+[
+    {
+        "id":"1",
+        "name":"Алексей",
+        "login":"alx",
+        "password":"1256"
+    },
+    {
+        "id":"2",
+        "name":"Павел",
+        "login":"pvl",
+        "password":"6454"
+    },
+    {
+        "id":"3",
+        "name":"Михаил",
+        "login":"mhl",
+        "password":"5652"
+    }
+]

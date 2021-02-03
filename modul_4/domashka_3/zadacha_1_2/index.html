@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div id="conteiner">
+
+        </div>
+        <button onclick="getAjax()">  Добавить</button>
+        <div id="users">
+
+        </div>
+        <button onclick="getUsers()">Ползователи</button>
+    </body>
+    <script>  
+        function getAjax(){   
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'ajax.html', true); //true - запрос синхронный
+            xhr.send();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState != 4) return;
+                if (xhr.status != 200) {
+                alert( xhr.status + ': ' + xhr.statusText ); // обработать ошибку
+            } else {
+                let div = document.getElementById('conteiner');
+                div.innerHTML=xhr.responseText;
+                document.body.appendChild(div);
+                
+                }
+            }
+        }
+        function getUsers(){   
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'users.json', true); //true - запрос синхронный
+            xhr.send();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState != 4) return;
+                if (xhr.status != 200) {
+                alert( xhr.status + ': ' + xhr.statusText ); // обработать ошибку
+            } else {
+                let arrUsers =JSON.parse(xhr.responseText);
+                console.log(arrUsers);
+                //let us = document.getElementById('users');
+                let spisok = document.createElement('ul');
+                arrUsers.forEach(element => {
+                    let li =  document.createElement('li');
+                    li.innerText=element.id + ' Имя: ' + element.name + ' Логин: ' + element.login ; 
+                    spisok.appendChild(li);                 
+                });
+                users.append(spisok);
+                document.appendChild(us);
+                
+                }
+            }
+        }
+    </script>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div id="cards">
+            
+        </div>
+        <button id="btn" onclick="getCards()">Пооказать еще</button>
+    </body>
+    <script> 
+    let count=4;
+    var xhr = new XMLHttpRequest();
+            xhr.open('GET', `cards.json?count=${count}`, true); //true - запрос синхронный
+            xhr.send();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState != 4) return;
+                if (xhr.status != 200) {
+                    alert( xhr.status + ': ' + xhr.statusText ); // обработать ошибку
+                } else {
+                    let arrUsers =JSON.parse(xhr.responseText);
+                    console.log(arrUsers);
+                    let cards = document.getElementById('cards');
+                    cards.innerHTML='';
+                    arrUsers.forEach(element => { 
+                        let card =  document.createElement('div');
+                        card.style.margin="15px"
+                        card.innerText = element.id + '. ' + 'Марка: ' + element.name + '\n' +'Модель: ' + element.model+ '\n'  +'Цена: ' + element.price + ' тыс. руб.';
+                        cards.appendChild(card);                 
+                    });
+                   
+                
+                }
+            }
+     count=4; 
+        function getCards(){  
+            count+=4;
+        
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', `cards.json?count=${count}`, true); //true - запрос синхронный
+            xhr.send();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState != 4) return;
+                if (xhr.status != 200) {
+                    alert( xhr.status + ': ' + xhr.statusText ); // обработать ошибку
+                } else {
+                    let arrUsers =JSON.parse(xhr.responseText);
+                    console.log(arrUsers);
+                    let cards = document.getElementById('cards');
+                    cards.innerHTML='';
+                    arrUsers.forEach(element => { 
+                        let card =  document.createElement('div');
+                        card.style.margin="15px"
+                        card.innerText = element.id + '. ' + 'Марка: ' + element.name + '\n' +'Модель: ' + element.model+ '\n'  +'Цена: ' + element.price + 'тыс. руб.';
+                        cards.appendChild(card);                 
+                    });
+                   
+                
+                }
+            }
+            if (count==8) {
+                btn.style.display="none"
+                return
+            };
+            
+        }
+    </script>
+
+</html>
